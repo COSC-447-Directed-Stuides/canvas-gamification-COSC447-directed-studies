@@ -17,6 +17,7 @@ class CanvasCourse(models.Model):
     course_id = models.IntegerField()
     token = models.CharField(max_length=500)
     instructor = models.ForeignKey(MyUser, on_delete=models.SET_NULL, null=True, blank=True)
+    course_message = models.CharField(max_length=2000)
 
     allow_registration = models.BooleanField(default=False)
     visible_to_students = models.BooleanField(default=False)
